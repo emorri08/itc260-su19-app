@@ -8,8 +8,10 @@ $config['title'] = 'Default Title';
 $config['copyright'] = 'Default Copyright';
 $config['masthead'] = 'Default MastHead';
 $config['theme'] = 'themes/bootswatch/';
+$config['flickrKey'] = '3fe8a714bc483e91dd25d28cb4b17153';
 
 $config['nav1'] = array(
     'news' => 'News',
-    'news/create' => 'Add News'
+    'news/create' => 'Add News',
+    'pics' => 'Pics'
 );
