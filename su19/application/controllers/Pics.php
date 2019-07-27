@@ -5,16 +5,20 @@ class Pics extends CI_Controller {
         public function __construct()
         {
                 parent::__construct();
+                $this->load->model('pics_model');
+            
+            
 //                $this->load->model('news_model');
 //                $this->load->helper('url_helper');
         }
 
-        public function index()
+        public function index($tags = 'cats')
         {  
                 
             
-            $api_key = $this->config->item('flickrKey');
+            //$api_key = $this->config->item('flickrKey');
 
+            /*
             $tags = 'cats,kittens,bears,polar';
 
             $perPage = 25;
@@ -27,7 +31,9 @@ class Pics extends CI_Controller {
 
             $response = json_decode(file_get_contents($url));
             $pics = $response->photos->photo;
-
+            */
+            
+            
             /*
             echo "<pre>";
             echo var_dump($pics);
@@ -36,8 +42,9 @@ class Pics extends CI_Controller {
             die;
             */
 
-
-
+            $tags = 'cats,kittens,bears,polar';
+            $pics = $this->pics_model->get_pics($tags);
+         
             foreach($pics as $pic){
 
                 $size = 'm';

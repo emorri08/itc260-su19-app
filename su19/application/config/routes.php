@@ -55,6 +55,7 @@ $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
 
 //routes for pics
+$route['pics/(:any)'] = 'pics/$1';
 $route['pics'] = 'pics';
 
 $route['default_controller'] = 'welcome';
